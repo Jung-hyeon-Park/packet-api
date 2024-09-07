@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: packet-api
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: packet-group
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      properties:
+        max.poll.records: 1000
+        max.poll.interval.ms: 3000
